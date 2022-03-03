@@ -33,6 +33,6 @@ jobs:
 
     - name: Terraform Apply
       id: apply
-      run: terraform apply
+      run: terraform apply -auto-approve
 
  

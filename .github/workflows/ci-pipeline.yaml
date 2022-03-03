@@ -8,9 +8,8 @@ env:
 
 jobs:
   terraform:
-    name: 'Terraform'
-    runs-on: mint-latest
-
+    name: Terraform
+    runs-on: ubuntu-latest
     # Set the working directory to main for the config files
     defaults:
       run:

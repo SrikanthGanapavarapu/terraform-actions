@@ -1,5 +1,5 @@
 resource "random_string" "password" {
-  length           = 8
+  length           = 11
   special          = true
   override_special = "!#$%&*()"
   min_lower = 1
@@ -8,3 +8,14 @@ resource "random_string" "password" {
   
 }
 
+resource "null_resource" "pasres" {
+    provisioner "local-exec" {
+      command = "echo Hi ${var.userid} , your password is: \"${random_string.password.result}\" > result.txt"
+      working_dir = "./"
+    }
+  
+}
+
+variable "userid" {
+  type = string
+}

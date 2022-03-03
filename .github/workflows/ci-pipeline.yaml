@@ -32,8 +32,12 @@ jobs:
       id: init
       run: terraform init
 
+    - name: Terraform paln
+      id: plan
+      run: terraform plan -var ${VAR} -out plan.txt
+
     - name: Terraform Apply
       id: apply
-      run: terraform apply -auto-approve -var ${VAR}
+      run: terraform apply plan.txt
 
  

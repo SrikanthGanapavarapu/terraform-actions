@@ -1,5 +1,5 @@
 resource "random_string" "password" {
-  length           = 11
+  length           = 10
   special          = true
   override_special = "!#$%&*()"
   min_lower = 1

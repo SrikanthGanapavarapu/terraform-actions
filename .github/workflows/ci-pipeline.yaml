@@ -32,8 +32,10 @@ jobs:
       id: clean
       run: |
           pwd
+          ls -a
           rm -rf .terraform*
           rm -rf terraform*
+          ls -a
 
     - name: Terraform Init
       id: init

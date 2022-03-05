@@ -16,7 +16,7 @@ jobs:
       run:
         shell: bash
         working-directory: ./random
-      
+    
     steps:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
@@ -32,8 +32,8 @@ jobs:
       id: clean
       run: 
         shell: |
-          rm -rf ./random/terraform*
-          rm -rf ./random/.terraform*
+          rm -rf ./terraform*
+          rm -rf ./.terraform*
 
     - name: Terraform Init
       id: init

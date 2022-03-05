@@ -30,7 +30,7 @@ jobs:
 
     - name: Terraform Init
       id: init
-      run: terraform init
+      run: terraform get .
 
     - name: Terraform paln
       id: plan

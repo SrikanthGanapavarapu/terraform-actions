@@ -28,13 +28,6 @@ jobs:
       with:
         terraform_version: ${TF_VERSION}
 
-    - name: Terraform clean
-      id: clean
-      run: 
-        shell: |
-          rm -rf ./terraform*
-          rm -rf ./.terraform*
-
     - name: Terraform Init
       id: init
       run: terraform get -update
